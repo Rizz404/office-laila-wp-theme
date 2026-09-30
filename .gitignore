@@ -1,0 +1,48 @@
+# ----------------------------------------------------------------------
+# Office Laila Theme .gitignore
+# ----------------------------------------------------------------------
+
+# 1. Node & Package Dependencies (TIDAK BOLEH di-push ke Plesk)
+node_modules/
+package-lock.json
+package.json
+
+# 2. Tailwind CSS Build Cache & Source (Opsional, tapi best practice)
+# Kita hanya butuh file output.css di server live.
+# Jika kamu tidak mau kode mentah Tailwind-mu ada di server, abaikan src/.
+# Tapi untuk saat ini, kita biarkan src/ ikut ter-push agar aman.
+.parcel-cache/
+
+# 3. macOS / Windows System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# 4. VS Code / IDE Settings (Hanya untuk local)
+.vscode/
+.idea/
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# 5. Log Files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 6. Archive Files (Jika kamu iseng mem-backup di dalam folder)
+*.zip
+*.tar.gz
+*.rar
+
+docs
+
+# 7. Static HTML preview (versi HTML statis untuk preview, bukan bagian dari tema WP)
+html-preview/
