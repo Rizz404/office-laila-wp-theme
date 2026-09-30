@@ -1,0 +1,22 @@
+/*
+Theme Name: Office Laila Theme
+Theme URI:
+Author: オフィス らいら
+Author URI:
+Description: オフィス らいら 公式サイト用カスタムテーマ。Apricot Company Theme を複製してブランディングを差し替えたもの。会社情報・事業内容の本文は仮データにつき、正式情報が揃い次第更新すること（TODO）。
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: office-laila-theme
+Tags: corporate, business, custom-menu, featured-images, translation-ready
+*/
+
+/*
+ * 本テーマのデザイン用スタイルは assets/css/common.css に集約しています。
+ * functions.php の wp_enqueue_style により読み込まれます。
+ * このファイルは WordPress テーマ規約の「テーマヘッダー」を保持する
+ * プレースホルダーです。ここには直接スタイルを記述しないでください。
+ */
