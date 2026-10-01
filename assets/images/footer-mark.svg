@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="736" height="754" viewBox="0 0 736 754">
+  <defs>
+    <linearGradient id="markGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C3DCF0"/>
+      <stop offset="45%" stop-color="#6F9FCB"/>
+      <stop offset="100%" stop-color="#3C6BA0"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF5FC"/>
+      <stop offset="60%" stop-color="#A9CBE8"/>
+      <stop offset="100%" stop-color="#6D9BC9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="736" height="754" fill="#0C1837"/>
+
+  <text x="330" y="560" text-anchor="middle"
+        font-family="'Quicksand','Poppins','Varela Round','Arial Rounded MT Bold',sans-serif"
+        font-weight="700" font-size="620" fill="url(#markGrad)">L</text>
+
+  <path d="M 525 515 C 590 535 640 555 670 535 C 645 575 585 582 535 558 C 525 545 522 530 525 515 Z"
+        fill="url(#accentGrad)"/>
+</svg>

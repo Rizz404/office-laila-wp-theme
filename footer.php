@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
       <div class="site-footer__brand">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-footer__logo-link">
-          <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/footer-mark.png' ); ?>" alt="オフィス らいら ロゴマーク" class="site-footer__logo-mark">
+          <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/footer-mark.svg' ); ?>" alt="オフィス らいら ロゴマーク" class="site-footer__logo-mark">
           <span class="site-footer__logo-text">
             オフィス らいら
             <small>OFFICE LAILA</small>

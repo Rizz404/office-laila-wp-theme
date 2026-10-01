@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="576" height="130" viewBox="0 0 576 130">
+  <defs>
+    <linearGradient id="markGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C3DCF0"/>
+      <stop offset="45%" stop-color="#6F9FCB"/>
+      <stop offset="100%" stop-color="#3C6BA0"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEF5FC"/>
+      <stop offset="60%" stop-color="#A9CBE8"/>
+      <stop offset="100%" stop-color="#6D9BC9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="576" height="130" fill="#FFFFFF"/>
+
+  <text x="60" y="104" text-anchor="middle"
+        font-family="'Quicksand','Poppins','Varela Round','Arial Rounded MT Bold',sans-serif"
+        font-weight="700" font-size="140" fill="url(#markGrad)">L</text>
+
+  <path d="M 78 96 C 100 108 118 116 132 114 C 122 122 104 124 86 114 C 80 108 78 101 78 96 Z"
+        fill="url(#accentGrad)"/>
+
+  <text x="150" y="82"
+        font-family="'Quicksand','Poppins','Varela Round',sans-serif"
+        font-weight="600" font-size="44" letter-spacing="0.5" fill="#3367E6">Office Laila</text>
+</svg>

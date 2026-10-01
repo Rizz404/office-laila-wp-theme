@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <header class="site-header">
   <div class="site-header__inner">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-header__logo" aria-label="オフィス らいら トップへ">
-      <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/apricot-logo.png' ); ?>" alt="オフィス らいら ロゴ" class="site-header__logo-img">
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/apricot-logo.svg' ); ?>" alt="オフィス らいら ロゴ" class="site-header__logo-img">
     </a>
 
     <nav class="site-nav" aria-label="グローバルナビゲーション">
