@@ -1804,9 +1804,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 @media (min-width: 800px) {
   .site-footer__top {
-    /* TODO: 元は3列（ブランド/サイトマップ/関連リンク）。Apricot固有の関連リンク列を
-       削除したため2列に調整。関連リンクを復活させる場合は 1.5fr 1fr 1fr に戻すこと */
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
     gap: 48px;
   }
 }

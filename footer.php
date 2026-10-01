@@ -14,8 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     <div class="site-footer__top">
 
       <div class="site-footer__brand">
-        <!-- TODO: Apricotの実ロゴマーク画像は転用せず外した。正式ロゴが決まり次第 <img> に戻す -->
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-footer__logo-link">
+          <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/footer-mark.png' ); ?>" alt="オフィス らいら ロゴマーク" class="site-footer__logo-mark">
           <span class="site-footer__logo-text">
             オフィス らいら
             <small>OFFICE LAILA</small>
@@ -40,8 +40,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         </ul>
       </div>
 
-      <!-- TODO: 元のApricot向け「公式サイト／AI支援サイト」外部リンク列はApricot固有のため削除。
-           オフィス らいら用の関連リンクが決まったらここに追加する -->
+      <div class="site-footer__col">
+        <h4>RELATED</h4>
+        <ul>
+          <li><a href="https://apricot-j.co.jp/apricot/" target="_blank" rel="noopener noreferrer">公式サイト</a></li>
+          <li><a href="http://ai.apricot-j.co.jp/" target="_blank" rel="noopener noreferrer">AI支援サイト</a></li>
+          <li><a href="https://apricot-j.co.jp/apricot/company.html" target="_blank" rel="noopener noreferrer">会社案内の詳細を見る</a></li>
+        </ul>
+      </div>
 
     </div>
 

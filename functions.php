@@ -124,7 +124,7 @@ function office_laila_theme_enqueue_assets() {
 
     // テーマヘッダー保持用 style.css
     wp_enqueue_style(
-        'office-laila-style',
+        'office-laila-theme',
         get_stylesheet_uri(),
         array( 'office-laila-wp-overrides' ),
         $theme_version
@@ -225,9 +225,8 @@ function office_laila_theme_head_meta() {
     echo '<meta name="theme-color" content="#0F2A55">' . "\n";
 
     // フロントページ用のメタディスクリプション（暫定）
-    // TODO: オフィス らいら の正式な事業内容が決まり次第、この説明文を書き換えること
     if ( is_front_page() ) {
-        $desc = 'オフィス らいら の公式サイトです。（TODO：事業内容・強みを紹介する説明文に差し替えてください）';
+        $desc = 'オフィス らいらは、システム開発・Web制作・ITコンサルティングの長年の実績を活かし、企業の業務改善・AI活用・海外展開を支援するITパートナーです。';
         echo '<meta name="description" content="' . esc_attr( $desc ) . '">' . "\n";
     }
 }

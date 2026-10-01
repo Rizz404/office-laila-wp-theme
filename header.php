@@ -19,9 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <!-- ============== HEADER ============== -->
 <header class="site-header">
   <div class="site-header__inner">
-    <!-- TODO: Apricotの実ロゴ画像は転用せず外した。正式ロゴが決まり次第、assets/images/ に配置して<img>に戻す -->
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-header__logo" aria-label="オフィス らいら トップへ">
-      <span class="site-header__logo-text">オフィス らいら</span>
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/apricot-logo.png' ); ?>" alt="オフィス らいら ロゴ" class="site-header__logo-img">
     </a>
 
     <nav class="site-nav" aria-label="グローバルナビゲーション">
