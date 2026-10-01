@@ -129,7 +129,7 @@ get_header();
             <div class="company-info__row">
               <dt>公式サイト</dt>
               <dd>
-                <a href="https://apricot-j.co.jp/apricot/" target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" target="_blank" rel="noopener noreferrer">
                   公式サイトを見る
                 </a>
               </dd>
