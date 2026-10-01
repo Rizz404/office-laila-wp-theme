@@ -137,7 +137,7 @@ get_header();
             <div class="company-info__row">
               <dt>AI支援サイト</dt>
               <dd>
-                <a href="<?php echo esc_url( 'http://ai.apricot-j.co.jp/' ); ?>" target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo esc_url( 'https://ai.office-laila.biz/' ); ?>" target="_blank" rel="noopener noreferrer">
                   AI支援サイトを見る
                 </a>
               </dd>

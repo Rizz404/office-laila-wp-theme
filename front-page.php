@@ -245,7 +245,7 @@ get_header();
           </div>
           <div class="news-list__body">
             <h3 class="news-list__title">
-              <a href="http://ai.apricot-j.co.jp/" target="_blank" rel="noopener noreferrer">
+              <a href="https://ai.office-laila.biz/" target="_blank" rel="noopener noreferrer">
                 AI導入支援サービスページを公開しました
               </a>
             </h3>

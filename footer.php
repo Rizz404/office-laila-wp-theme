@@ -43,9 +43,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
       <div class="site-footer__col">
         <h4>RELATED</h4>
         <ul>
-          <li><a href="https://apricot-j.co.jp/apricot/" target="_blank" rel="noopener noreferrer">公式サイト</a></li>
-          <li><a href="http://ai.apricot-j.co.jp/" target="_blank" rel="noopener noreferrer">AI支援サイト</a></li>
-          <li><a href="https://apricot-j.co.jp/apricot/company.html" target="_blank" rel="noopener noreferrer">会社案内の詳細を見る</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>" target="_blank" rel="noopener noreferrer">公式サイト</a></li>
+          <li><a href="<?php echo esc_url( 'https://ai.office-laila.biz/' ); ?>" target="_blank" rel="noopener noreferrer">AI支援サイト</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/company/' ) ); ?>" target="_blank" rel="noopener noreferrer">会社案内の詳細を見る</a></li>
         </ul>
       </div>
 
