@@ -3,11 +3,6 @@
  * Front Page (トップページ)
  *
  * @package Office Laila Theme
- *
- * TODO: このページの本文は Apricot Company Theme を複製した際の暫定プレースホルダー。
- * オフィス らいら の実際の事業内容・強み・実績・お知らせが確定し次第、内容を差し替えること。
- * HTML構造・クラス名は共通CSS（assets/css/common.css）のレイアウトに依存しているため、
- * 文言を差し替える際もタグ構造・要素数（カード3枚/4項目など）はできるだけ維持すること。
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
@@ -18,15 +13,15 @@ get_header();
     <div class="container hero__inner">
 
       <div class="hero__copy">
-        <span class="hero__eyebrow">TODO: キャッチコピー</span>
+        <span class="hero__eyebrow">SYSTEM × AI × GLOBAL</span>
         <h1 class="hero__title">
-          （TODO：オフィス らいら の<br>
-          <span class="accent">キャッチコピー</span>を<br>
-          ここに設定してください。）
+          長年のシステム開発実績に、<br>
+          <span class="accent">AIとグローバル支援</span>を加え、<br>
+          企業の次の成長をサポートします。
         </h1>
         <p class="hero__lead">
-          （TODO：オフィス らいら の事業内容・強みの紹介文をここに記載してください。<br class="hide-sp">
-          正式な会社情報が揃うまでの仮テキストです。）
+          オフィス らいらは、システム開発・Web制作・ITコンサルティングの実績を活かし、<br class="hide-sp">
+          企業の業務改善、AI活用、海外展開を支援するITパートナーです。
         </p>
         <div class="hero__ctas">
           <a href="<?php echo esc_url( home_url( '/service/' ) ); ?>" class="btn btn--primary btn--lg">事業内容を見る</a>
@@ -34,23 +29,21 @@ get_header();
         </div>
         <div class="hero__meta">
           <div class="hero__meta-item">
-            <span class="hero__meta-num">TODO<small>実績</small></span>
-            <span class="hero__meta-label">TODO</span>
+            <span class="hero__meta-num">創業以来<small>長年</small></span>
+            <span class="hero__meta-label">SYSTEM DEVELOPMENT</span>
           </div>
           <div class="hero__meta-item">
-            <span class="hero__meta-num">TODO<small>事業領域</small></span>
-            <span class="hero__meta-label">TODO</span>
+            <span class="hero__meta-num">6<small>事業領域</small></span>
+            <span class="hero__meta-label">SERVICE AREA</span>
           </div>
           <div class="hero__meta-item">
-            <span class="hero__meta-num">TODO</span>
-            <span class="hero__meta-label">TODO</span>
+            <span class="hero__meta-num">AI + Global</span>
+            <span class="hero__meta-label">NEW CAPABILITY</span>
           </div>
         </div>
       </div>
 
       <div class="hero__visual" aria-hidden="true">
-        <!-- TODO: 画像はApricotから流用したストック素材。ライセンス範囲を確認のうえ、
-             オフィス らいら 用のビジュアルに差し替えるか、利用継続の可否を確認すること -->
         <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/hero-ai-visual.png' ); ?>" alt="" class="hero__visual-img">
       </div>
 
@@ -62,9 +55,10 @@ get_header();
     <div class="container">
       <div class="section__head">
         <span class="section__eyebrow">OUR STRENGTHS</span>
-        <h2 class="section__title">オフィス らいら の<span class="accent">強み（TODO）</span></h2>
+        <h2 class="section__title">オフィス らいらの<span class="accent">3つの強み</span></h2>
         <p class="section__lead">
-          （TODO：オフィス らいら の強みを紹介する文章をここに記載してください。）
+          オフィス らいらは、長年のシステム開発・Web制作・ITコンサルティングの経験を活かし、<br class="hide-sp">
+          企業の業務改善・AI活用・海外展開を総合的に支援します。
         </p>
       </div>
 
@@ -80,10 +74,11 @@ get_header();
               <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/>
             </svg>
           </div>
-          <p class="strength-card__eyebrow">TODO</p>
-          <h3 class="strength-card__title">（TODO：強み1のタイトル）</h3>
+          <p class="strength-card__eyebrow">System</p>
+          <h3 class="strength-card__title">長年のシステム開発実績</h3>
           <p class="strength-card__text">
-            （TODO：強み1の説明文をここに記載してください。）
+            業務システム、Webシステム、ITコンサルティングなど、
+            企業の業務に合わせた開発・改善支援を行ってきた実績があります。
           </p>
         </article>
 
@@ -95,10 +90,11 @@ get_header();
               <path d="M18.5 16.5 19.3 18.2 21 19 19.3 19.8 18.5 21.5 17.7 19.8 16 19 17.7 18.2 18.5 16.5z"/>
             </svg>
           </div>
-          <p class="strength-card__eyebrow">TODO</p>
-          <h3 class="strength-card__title">（TODO：強み2のタイトル）</h3>
+          <p class="strength-card__eyebrow">AI Support</p>
+          <h3 class="strength-card__title">AI活用・業務改善への対応</h3>
           <p class="strength-card__text">
-            （TODO：強み2の説明文をここに記載してください。）
+            これまでのIT支援の経験を活かし、生成AIやデジタルツールを活用した
+            業務改善にも対応しています。
           </p>
         </article>
 
@@ -112,10 +108,11 @@ get_header();
               <path d="M12 3a13.5 13.5 0 0 0 0 18"/>
             </svg>
           </div>
-          <p class="strength-card__eyebrow">TODO</p>
-          <h3 class="strength-card__title">（TODO：強み3のタイトル）</h3>
+          <p class="strength-card__eyebrow">Global</p>
+          <h3 class="strength-card__title">海外人材・グローバル連携</h3>
           <p class="strength-card__text">
-            （TODO：強み3の説明文をここに記載してください。）
+            海外人材や海外パートナーとの連携により、開発・制作・運用支援を
+            柔軟に行える体制を整えています。
           </p>
         </article>
 
@@ -130,30 +127,31 @@ get_header();
         <span class="section__eyebrow">SERVICE</span>
         <h2 class="section__title">事業内容</h2>
         <p class="section__lead">
-          （TODO：オフィス らいら の事業内容の概要をここに記載してください。）
+          システム開発、Web制作、ITコンサルティングを中心に、AI導入支援やグローバル連携まで、<br class="hide-sp">
+          企業の成長を支えるITサービスを提供しています。
         </p>
       </div>
 
       <div class="svc-summary__grid">
         <article class="svc-summary__item">
           <span class="svc-summary__num">01</span>
-          <h3 class="svc-summary__title">（TODO：事業1）</h3>
+          <h3 class="svc-summary__title">システム開発・IT支援</h3>
           <p class="svc-summary__text">
-            （TODO：事業1の説明文。）
+            業務システム、Webシステム、ITコンサルティングを通じて、企業の業務改善を支援します。
           </p>
         </article>
         <article class="svc-summary__item">
           <span class="svc-summary__num">02</span>
-          <h3 class="svc-summary__title">（TODO：事業2）</h3>
+          <h3 class="svc-summary__title">Web・アプリ制作</h3>
           <p class="svc-summary__text">
-            （TODO：事業2の説明文。）
+            企業サイト、サービスサイト、Webシステムなど、集客と業務効率化につながる制作を行います。
           </p>
         </article>
         <article class="svc-summary__item">
           <span class="svc-summary__num">03</span>
-          <h3 class="svc-summary__title">（TODO：事業3）</h3>
+          <h3 class="svc-summary__title">AI・グローバル支援</h3>
           <p class="svc-summary__text">
-            （TODO：事業3の説明文。）
+            生成AIの活用支援や海外人材・海外パートナーとの連携により、新しい業務体制づくりを支援します。
           </p>
         </article>
       </div>
@@ -173,7 +171,8 @@ get_header();
           <span class="section__eyebrow">WORKS</span>
           <h2 class="section__title section__title--left">開発実績</h2>
           <p class="wks-summary__desc">
-            （TODO：オフィス らいら の実績紹介文をここに記載してください。）
+            業務システム、Webシステム、パッケージソフトなど、企業の業務に合わせた開発・導入支援を行ってきました。
+            具体的な社名や案件名ではなく、対応分野別に実績をご紹介しています。
           </p>
           <a href="<?php echo esc_url( home_url( '/works/' ) ); ?>" class="btn btn--primary wks-summary__cta-btn">開発実績を見る</a>
         </div>
@@ -182,29 +181,29 @@ get_header();
           <li>
             <span class="wks-summary__num">01</span>
             <div class="wks-summary__body">
-              <span class="wks-summary__name">（TODO：実績分野1）</span>
-              <span class="wks-summary__sub">（TODO：補足）</span>
+              <span class="wks-summary__name">業務システム開発</span>
+              <span class="wks-summary__sub">販売管理・在庫管理・社内管理など</span>
             </div>
           </li>
           <li>
             <span class="wks-summary__num">02</span>
             <div class="wks-summary__body">
-              <span class="wks-summary__name">（TODO：実績分野2）</span>
-              <span class="wks-summary__sub">（TODO：補足）</span>
+              <span class="wks-summary__name">Webシステム制作</span>
+              <span class="wks-summary__sub">企業サイト・Webシステム・管理画面など</span>
             </div>
           </li>
           <li>
             <span class="wks-summary__num">03</span>
             <div class="wks-summary__body">
-              <span class="wks-summary__name">（TODO：実績分野3）</span>
-              <span class="wks-summary__sub">（TODO：補足）</span>
+              <span class="wks-summary__name">パッケージソフト導入支援</span>
+              <span class="wks-summary__sub">業務支援サービスの導入・運用支援</span>
             </div>
           </li>
           <li>
             <span class="wks-summary__num">04</span>
             <div class="wks-summary__body">
-              <span class="wks-summary__name">（TODO：実績分野4）</span>
-              <span class="wks-summary__sub">（TODO：補足）</span>
+              <span class="wks-summary__name">ITコンサルティング</span>
+              <span class="wks-summary__sub">業務課題の整理と改善提案</span>
             </div>
           </li>
         </ul>
@@ -220,23 +219,53 @@ get_header();
         <span class="section__eyebrow">NEWS</span>
         <h2 class="section__title">お知らせ</h2>
         <p class="section__lead">
-          オフィス らいら からのお知らせ、サービス情報、更新情報をご案内します。
+          オフィス らいらからのお知らせ、サービス情報、更新情報をご案内します。
         </p>
       </div>
 
       <ul class="news-list">
 
-        <!-- TODO: 以下はサンプル表示用のダミー項目。正式なお知らせに差し替えるか、
-             未確定の間は非表示（コメントアウト）にしてください -->
         <li class="news-list__item">
           <div class="news-list__meta">
-            <time class="news-list__date" datetime="2026-01-01">YYYY.MM.DD</time>
+            <time class="news-list__date" datetime="2026-05-16">2026.05.16</time>
             <span class="news-list__cat news-list__cat--info">お知らせ</span>
           </div>
           <div class="news-list__body">
-            <h3 class="news-list__title">（TODO：お知らせタイトル）</h3>
+            <h3 class="news-list__title">オフィス らいら コーポレートサイトをリニューアルしました</h3>
             <p class="news-list__desc">
-              （TODO：お知らせ本文。）
+              事業内容、開発実績、会社案内をより分かりやすく整理し、企業情報を見やすく更新しました。
+            </p>
+          </div>
+        </li>
+
+        <li class="news-list__item">
+          <div class="news-list__meta">
+            <time class="news-list__date" datetime="2026-05-16">2026.05.16</time>
+            <span class="news-list__cat news-list__cat--service">サービス</span>
+          </div>
+          <div class="news-list__body">
+            <h3 class="news-list__title">
+              <a href="http://ai.apricot-j.co.jp/" target="_blank" rel="noopener noreferrer">
+                AI導入支援サービスページを公開しました
+              </a>
+            </h3>
+            <p class="news-list__desc">
+              長年のシステム開発・Web制作・ITコンサルティングの経験を活かし、企業向けAI導入支援サービスの案内を開始しました。
+            </p>
+          </div>
+        </li>
+
+        <li class="news-list__item">
+          <div class="news-list__meta">
+            <time class="news-list__date" datetime="2026-05-16">2026.05.16</time>
+            <span class="news-list__cat news-list__cat--update">更新情報</span>
+          </div>
+          <div class="news-list__body">
+            <h3 class="news-list__title">
+              <a href="<?php echo esc_url( home_url( '/message/' ) ); ?>">代表者挨拶ページを更新しました</a>
+            </h3>
+            <p class="news-list__desc">
+              代表者挨拶ページを新しいデザインに合わせて整備しました。
             </p>
           </div>
         </li>
@@ -253,10 +282,12 @@ get_header();
   <section class="section cta" id="contact">
     <div class="container container--narrow">
       <h2 class="cta__title">
-        （TODO：お問い合わせセクションの見出し）
+        システム開発から、AI・海外支援まで。<br>
+        まずはお気軽にご相談ください。
       </h2>
       <p class="cta__lead">
-        （TODO：お問い合わせセクションのリード文。）
+        業務システム開発、Web制作、ITコンサルティング、AI導入支援、グローバル連携など、<br class="hide-sp">
+        企業の課題に合わせたご相談を承ります。
       </p>
       <div class="cta__buttons">
         <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--primary btn--lg">お問い合わせする</a>

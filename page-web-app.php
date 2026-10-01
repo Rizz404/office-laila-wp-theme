@@ -6,10 +6,6 @@
  * （スラッグ "web-app" にも自動マッチ）
  *
  * @package Office Laila Theme
- *
- * TODO: 本文はApricot Company Theme（IT/システム開発業）の内容をそのまま複製した
- * プレースホルダー。オフィス らいら の実際の事業内容に合わせて全面的に書き直すこと。
- * このサービス区分（Web・アプリ制作）自体がオフィス らいらに存在するかも要確認。
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
@@ -40,27 +36,44 @@ get_header();
       <p class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">トップ</a><span class="breadcrumb__sep">›</span><a href="<?php echo esc_url( home_url( '/service/' ) ); ?>">事業内容</a><span class="breadcrumb__sep">›</span>Web・アプリ制作</p>
       <p class="page-header__eyebrow">02 / WEB &amp; APP</p>
       <h1 class="page-header__title">
-        （TODO：このサービスの見出し）
+        <span class="accent">Web・アプリ</span>で、業務と集客をつなぐ。
       </h1>
       <p class="page-header__lead">
-        （TODO：このサービスの説明文をここに記載してください。）
+        企業サイト、サービスサイト、Webシステム、スマートフォン対応サイトなど、集客と業務効率化につながるWeb制作を行います。
+        見た目だけのサイトではなく、業務やビジネスの目的とつながったWebをご提案します。
       </p>
     </div>
   </section>
 
   <section class="section">
     <div class="container container--narrow prose">
-      <h2>（TODO：見出し）</h2>
+      <h2>主な対応領域</h2>
       <ul>
-        <li>（TODO：対応領域1）</li>
+        <li>企業サイト・コーポレートサイト制作</li>
+        <li>サービスサイト・LP制作</li>
+        <li>Webシステム・業務Webアプリケーション</li>
+        <li>スマートフォン対応・レスポンシブWeb制作</li>
+        <li>WordPressなどCMS構築・運用</li>
+        <li>既存サイトのリニューアル・モダナイズ</li>
+      </ul>
+
+      <h2>システム会社が作るWebの強み</h2>
+      <p>システム開発で培ったバックエンドの知見を活かし、見た目だけでなく、データベース連携・お問い合わせ管理・社内システム連携などまで含めたWeb制作が可能です。デザイン会社とシステム会社のあいだに分断されがちな領域を、一社で一気通貫で支援できます。</p>
+
+      <h2>こんなお悩みに</h2>
+      <ul>
+        <li>古い会社サイトをリニューアルし、信頼感をアップしたい</li>
+        <li>スマートフォン対応がされておらず、見づらい</li>
+        <li>サイトと業務システムを連携させたい</li>
+        <li>更新しやすいCMSベースで作り直したい</li>
       </ul>
     </div>
   </section>
 
   <section class="section cta">
     <div class="container container--narrow">
-      <h2 class="cta__title">ご相談はこちら</h2>
-      <p class="cta__lead">まずはお気軽にご相談ください。</p>
+      <h2 class="cta__title">Web制作のご相談はこちら</h2>
+      <p class="cta__lead">サイトリニューアル、新規Webサービス、業務Webシステムなど幅広く対応します。</p>
       <div class="cta__buttons">
         <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--primary btn--lg">お問い合わせ</a>
         <a href="<?php echo esc_url( home_url( '/service/' ) ); ?>" class="btn btn--ghost btn--lg">事業内容一覧へ</a>

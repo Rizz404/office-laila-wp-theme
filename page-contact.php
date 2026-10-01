@@ -3,8 +3,11 @@
  * Template Name: お問い合わせ
  * お問い合わせページ（スラッグ "contact" にも自動マッチ）
  *
- * NOTE: フォームは現状 action="#" のダミー。本番公開時は Contact Form 7 等の
- * 入力プラグインのショートコードに差し替えるか、独自エンドポイントを設定すること。
+ * フォーム本体は Contact Form 7（プラグイン）で管理する。
+ * wp-admin > お問い合わせ > フォームで「お問い合わせフォーム」という
+ * タイトルのフォームを作成すると、下の [contact-form-7] が自動的にそれを表示する。
+ * 送信先メールアドレス等は CF7 のフォーム編集画面「メール」タブで設定する
+ * （テーマのコードを触る必要はない）。
  *
  * @package Office Laila Theme
  */
@@ -34,8 +37,8 @@ get_header();
       gap: 20px;
     }
 
-    /* ===== フォーム本体 ===== */
-    .contact-form {
+    /* ===== フォーム本体（Contact Form 7 が生成する <form class="wpcf7-form"> をスタイリング） ===== */
+    .contact-grid__form .wpcf7-form {
       display: grid;
       gap: 18px;
       background: #fff;
@@ -44,11 +47,11 @@ get_header();
       padding: 28px;
     }
     @media (min-width: 600px) {
-      .contact-form { padding: 32px; }
+      .contact-grid__form .wpcf7-form { padding: 32px; }
     }
     .contact-form__row { display: grid; gap: 8px; }
 
-    .contact-form label {
+    .contact-grid__form .wpcf7-form label {
       font-size: 13px;
       font-weight: 700;
       color: var(--c-navy);
@@ -57,7 +60,7 @@ get_header();
       align-items: center;
       gap: 8px;
     }
-    .contact-form label .req {
+    .contact-grid__form .wpcf7-form label .req {
       background: var(--c-blue);
       color: #fff;
       font-size: 10px;
@@ -66,7 +69,7 @@ get_header();
       font-weight: 700;
       letter-spacing: .04em;
     }
-    .contact-form label .opt {
+    .contact-grid__form .wpcf7-form label .opt {
       background: var(--c-bg-soft-2);
       color: var(--c-text-mute);
       font-size: 10px;
@@ -76,9 +79,12 @@ get_header();
       letter-spacing: .04em;
     }
 
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
+    /* CF7 は各入力を <span class="wpcf7-form-control-wrap"> で包む。ブロック化してレイアウト崩れを防ぐ */
+    .contact-grid__form .wpcf7-form .wpcf7-form-control-wrap { display: block; }
+
+    .contact-grid__form .wpcf7-form input.wpcf7-form-control,
+    .contact-grid__form .wpcf7-form select.wpcf7-form-control,
+    .contact-grid__form .wpcf7-form textarea.wpcf7-form-control {
       width: 100%;
       padding: 14px 16px;
       font-size: 15px;
@@ -90,14 +96,14 @@ get_header();
       letter-spacing: .02em;
       transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
     }
-    .contact-form input:focus,
-    .contact-form select:focus,
-    .contact-form textarea:focus {
+    .contact-grid__form .wpcf7-form input.wpcf7-form-control:focus,
+    .contact-grid__form .wpcf7-form select.wpcf7-form-control:focus,
+    .contact-grid__form .wpcf7-form textarea.wpcf7-form-control:focus {
       outline: none;
       border-color: var(--c-blue);
       box-shadow: 0 0 0 4px rgba(26,111,224,.12);
     }
-    .contact-form textarea { resize: vertical; min-height: 180px; line-height: 1.75; }
+    .contact-grid__form .wpcf7-form textarea.wpcf7-form-control { resize: vertical; min-height: 180px; line-height: 1.75; }
     .contact-form__hint { font-size: 12px; color: var(--c-text-mute); line-height: 1.7; }
 
     /* ===== 同意チェックボックス ===== */
@@ -107,7 +113,12 @@ get_header();
       border-radius: var(--radius);
       padding: 14px 18px;
     }
-    .contact-form__checkbox {
+    /*
+     * 同意チェックボックスは CF7 の [acceptance] タグが自動で
+     * <span class="wpcf7-list-item"><label><input type="checkbox">…テキスト…</label></span>
+     * を生成するため、その内側の label / input を直接スタイリングする。
+     */
+    .contact-form__consent label {
       display: flex;
       align-items: center;
       gap: 12px;
@@ -117,7 +128,7 @@ get_header();
       cursor: pointer;
       letter-spacing: .02em;
     }
-    .contact-form__checkbox input[type="checkbox"] {
+    .contact-form__consent input[type="checkbox"] {
       width: 18px;
       height: 18px;
       flex: 0 0 auto;
@@ -125,7 +136,46 @@ get_header();
       cursor: pointer;
       margin: 0;
     }
-    .contact-form__checkbox .req { margin-left: 4px; }
+    .contact-form__consent .req { margin-left: 4px; }
+
+    /* ===== エラー表示（CF7 のバリデーション出力） ===== */
+    .contact-grid__form .wpcf7-form-control.wpcf7-not-valid {
+      border-color: #d92d20;
+      box-shadow: none;
+    }
+    .contact-grid__form .wpcf7-not-valid-tip {
+      display: block;
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #d92d20;
+      letter-spacing: .02em;
+    }
+
+    /* ===== 送信結果アラート（CF7 のレスポンス出力） ===== */
+    .contact-grid__form .wpcf7-response-output {
+      grid-column: 1 / -1;
+      margin: 0;
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      line-height: 1.7;
+    }
+    .contact-grid__form .wpcf7-form.sent .wpcf7-response-output {
+      background: #ECFDF3;
+      border: 1px solid #ABEFC6;
+      color: #067647;
+    }
+    .contact-grid__form .wpcf7-form.invalid .wpcf7-response-output,
+    .contact-grid__form .wpcf7-form.spam .wpcf7-response-output,
+    .contact-grid__form .wpcf7-form.failed .wpcf7-response-output,
+    .contact-grid__form .wpcf7-form.aborted .wpcf7-response-output {
+      background: #FEF3F2;
+      border: 1px solid #FECDCA;
+      color: #B42318;
+    }
 
     /* ===== 送信ボタン ===== */
     .contact-form__submit {
@@ -228,70 +278,18 @@ get_header();
 
       <div class="contact-grid">
 
-        <!-- 左：フォーム -->
+        <!-- 左：フォーム（Contact Form 7） -->
         <div class="contact-grid__form">
           <?php
-          /*
-           * フォーム本体。Contact Form 7 等を導入する場合はこのブロックを
-           * `echo do_shortcode( '[contact-form-7 id="..."]' );` 等に差し替える。
-           */
+          if ( shortcode_exists( 'contact-form-7' ) ) {
+              // wp-admin > お問い合わせ で「お問い合わせフォーム」というタイトルのフォームを
+              // 作成すると、ここに自動で表示される（フォームの中身・宛先メール等は wp-admin 側で管理）。
+              echo do_shortcode( '[contact-form-7 title="お問い合わせフォーム"]' );
+          } elseif ( current_user_can( 'activate_plugins' ) ) {
+              // 管理者にだけ見えるセットアップ案内（一般訪問者には表示しない）
+              echo '<p class="contact-form__hint">Contact Form 7 プラグインを有効化し、「お問い合わせフォーム」という名前のフォームを作成してください。</p>';
+          }
           ?>
-          <form class="contact-form" method="post" action="#" novalidate>
-
-            <div class="contact-form__row">
-              <label for="form-company">会社名 <span class="opt">任意</span></label>
-              <input type="text" id="form-company" name="company" autocomplete="organization" placeholder="株式会社○○">
-            </div>
-
-            <div class="contact-form__row">
-              <label for="form-name">お名前 <span class="req">必須</span></label>
-              <input type="text" id="form-name" name="name" required autocomplete="name" placeholder="山田 太郎">
-            </div>
-
-            <div class="contact-form__row">
-              <label for="form-email">メールアドレス <span class="req">必須</span></label>
-              <input type="email" id="form-email" name="email" required autocomplete="email" placeholder="example@example.com">
-            </div>
-
-            <div class="contact-form__row">
-              <label for="form-tel">電話番号 <span class="opt">任意</span></label>
-              <input type="tel" id="form-tel" name="tel" autocomplete="tel" placeholder="000-0000-0000">
-            </div>
-
-            <div class="contact-form__row">
-              <label for="form-type">お問い合わせ種別 <span class="req">必須</span></label>
-              <select id="form-type" name="type" required>
-                <option value="">選択してください</option>
-                <option>システム開発について</option>
-                <option>Web制作について</option>
-                <option>ITコンサルティングについて</option>
-                <option>AI導入支援について</option>
-                <option>グローバル支援について</option>
-                <option>その他</option>
-              </select>
-            </div>
-
-            <div class="contact-form__row">
-              <label for="form-message">お問い合わせ内容 <span class="req">必須</span></label>
-              <textarea id="form-message" name="message" required placeholder="現状のお悩みやご相談内容をご記入ください。"></textarea>
-              <span class="contact-form__hint">具体的なご要望が固まっていない段階でも、まずはお気軽にご記入ください。</span>
-            </div>
-
-            <div class="contact-form__consent">
-              <label class="contact-form__checkbox" for="form-consent">
-                <input type="checkbox" id="form-consent" name="consent" required>
-                <span>
-                  個人情報の取り扱いに同意します
-                  <span class="req">必須</span>
-                </span>
-              </label>
-            </div>
-
-            <div class="contact-form__submit">
-              <button type="submit" class="btn btn--blue btn--lg btn--no-arrow">この内容で送信する</button>
-              <p class="contact-form__note">送信後、担当者より3営業日以内にご返信いたします。</p>
-            </div>
-          </form>
         </div>
 
         <!-- 右：補足情報 -->
@@ -300,7 +298,12 @@ get_header();
           <div class="contact-side-card">
             <h2 class="contact-side-card__title">相談できる内容</h2>
             <ul class="contact-topics">
-              <li>（TODO：オフィス らいら で相談できる内容を記載）</li>
+              <li>業務システム開発</li>
+              <li>Webサイト制作</li>
+              <li>Webシステム開発</li>
+              <li>ITコンサルティング</li>
+              <li>AI導入支援</li>
+              <li>海外人材・グローバル連携</li>
             </ul>
           </div>
 

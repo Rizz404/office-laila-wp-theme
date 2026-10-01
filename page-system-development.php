@@ -6,10 +6,6 @@
  * （スラッグ "system-development" にも自動マッチ）
  *
  * @package Office Laila Theme
- *
- * TODO: 本文はApricot Company Theme（IT/システム開発業）の内容をそのまま複製した
- * プレースホルダー。オフィス らいら の実際の事業内容に合わせて全面的に書き直すこと。
- * このサービス区分（システム受託開発）自体がオフィス らいらに存在するかも要確認。
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
@@ -40,27 +36,44 @@ get_header();
       <p class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">トップ</a><span class="breadcrumb__sep">›</span><a href="<?php echo esc_url( home_url( '/service/' ) ); ?>">事業内容</a><span class="breadcrumb__sep">›</span>システム受託開発</p>
       <p class="page-header__eyebrow">01 / SYSTEM DEVELOPMENT</p>
       <h1 class="page-header__title">
-        （TODO：このサービスの見出し）
+        業務に合った<span class="accent">システム</span>を、現場で動く形に。
       </h1>
       <p class="page-header__lead">
-        （TODO：このサービスの説明文をここに記載してください。）
+        業務システム、販売管理、在庫管理、社内管理システムなど、企業の業務に合わせたシステムを設計・開発します。
+        長年積み重ねてきた業務理解とシステム化のノウハウで、現場で本当に使える仕組みを構築します。
       </p>
     </div>
   </section>
 
   <section class="section">
     <div class="container container--narrow prose">
-      <h2>（TODO：見出し）</h2>
+      <h2>主な対応領域</h2>
       <ul>
-        <li>（TODO：対応領域1）</li>
+        <li>業務システムの新規開発（受注・販売・在庫・生産管理など）</li>
+        <li>既存システムのリプレイス・モダナイゼーション</li>
+        <li>社内管理システム・基幹システムの設計・開発</li>
+        <li>業務効率化のためのWebシステム構築</li>
+        <li>外部システム・SaaSとの連携、API開発</li>
+        <li>仕様の整理から、要件定義・設計・開発・運用までの一貫支援</li>
+      </ul>
+
+      <h2>オフィス らいらの開発の特徴</h2>
+      <p>長年、企業の基幹業務を支えるシステムを開発してきた経験があります。「業務の流れをきちんと理解し、現場で運用できる形に落とす」ことを大切にしているため、機能を作って終わりではなく、実際に使い続けられるシステムを提供できることが強みです。</p>
+
+      <h2>こんなお悩みに</h2>
+      <ul>
+        <li>古い基幹システムをリプレイスしたいが、業務を止められない</li>
+        <li>Excel管理が限界に来ており、システム化したい</li>
+        <li>複数システムが分断されており、業務効率を上げたい</li>
+        <li>仕様がまだ固まっていないが、相談しながら進めたい</li>
       </ul>
     </div>
   </section>
 
   <section class="section cta">
     <div class="container container--narrow">
-      <h2 class="cta__title">ご相談はこちら</h2>
-      <p class="cta__lead">まずはお気軽にご相談ください。</p>
+      <h2 class="cta__title">システム開発のご相談はこちら</h2>
+      <p class="cta__lead">現状の業務やシステムの課題から、お気軽にご相談ください。</p>
       <div class="cta__buttons">
         <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--primary btn--lg">お問い合わせ</a>
         <a href="<?php echo esc_url( home_url( '/service/' ) ); ?>" class="btn btn--ghost btn--lg">事業内容一覧へ</a>

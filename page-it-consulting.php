@@ -6,10 +6,6 @@
  * （スラッグ "it-consulting" にも自動マッチ）
  *
  * @package Office Laila Theme
- *
- * TODO: 本文はApricot Company Theme（IT/システム開発業）の内容をそのまま複製した
- * プレースホルダー。オフィス らいら の実際の事業内容に合わせて全面的に書き直すこと。
- * このサービス区分（ITコンサルティング）自体がオフィス らいらに存在するかも要確認。
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
@@ -40,27 +36,44 @@ get_header();
       <p class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">トップ</a><span class="breadcrumb__sep">›</span><a href="<?php echo esc_url( home_url( '/service/' ) ); ?>">事業内容</a><span class="breadcrumb__sep">›</span>ITコンサルティング</p>
       <p class="page-header__eyebrow">03 / IT CONSULTING</p>
       <h1 class="page-header__title">
-        （TODO：このサービスの見出し）
+        課題を整理し、<span class="accent">実装まで責任を持つ</span>コンサル。
       </h1>
       <p class="page-header__lead">
-        （TODO：このサービスの説明文をここに記載してください。）
+        既存業務やシステムの課題を整理し、最適なIT活用・DX推進を支援します。
+        机上の戦略だけで終わらせず、実際に動くシステムまで責任を持ってご支援できるのが、開発会社としての強みです。
       </p>
     </div>
   </section>
 
   <section class="section">
     <div class="container container--narrow prose">
-      <h2>（TODO：見出し）</h2>
+      <h2>主な対応領域</h2>
       <ul>
-        <li>（TODO：対応領域1）</li>
+        <li>現状業務・既存システムの棚卸し</li>
+        <li>業務課題の整理とIT活用方針の策定</li>
+        <li>システム化・リプレイス計画の策定</li>
+        <li>DX推進支援、業務効率化の推進</li>
+        <li>ITベンダー選定・開発要件の整理</li>
+        <li>AI・新技術活用に向けた検討支援</li>
+      </ul>
+
+      <h2>オフィス らいらのコンサルの特徴</h2>
+      <p>「コンサルだけ」「開発だけ」ではなく、戦略から実装、運用までを一気通貫で見られる立場でご支援します。要件が固まらない段階からの相談、現場ヒアリングを踏まえた現実的な改善案づくりが得意です。</p>
+
+      <h2>こんなお悩みに</h2>
+      <ul>
+        <li>何から手を付ければよいかわからない</li>
+        <li>システムが乱立しており、整理したい</li>
+        <li>DXに取り組みたいが、社内に詳しい人がいない</li>
+        <li>AIや海外活用も視野に入れてIT戦略を考えたい</li>
       </ul>
     </div>
   </section>
 
   <section class="section cta">
     <div class="container container--narrow">
-      <h2 class="cta__title">ご相談はこちら</h2>
-      <p class="cta__lead">まずはお気軽にご相談ください。</p>
+      <h2 class="cta__title">ITコンサルのご相談はこちら</h2>
+      <p class="cta__lead">業務の棚卸しから、システム化方針の策定までお気軽にご相談ください。</p>
       <div class="cta__buttons">
         <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--primary btn--lg">お問い合わせ</a>
         <a href="<?php echo esc_url( home_url( '/service/' ) ); ?>" class="btn btn--ghost btn--lg">事業内容一覧へ</a>

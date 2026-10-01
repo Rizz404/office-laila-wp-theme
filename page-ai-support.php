@@ -6,10 +6,6 @@
  * （スラッグ "ai-support" にも自動マッチ）
  *
  * @package Office Laila Theme
- *
- * TODO: 本文はApricot Company Theme（IT/システム開発業）の内容をそのまま複製した
- * プレースホルダー。オフィス らいら の実際の事業内容に合わせて全面的に書き直すこと。
- * このサービス区分（AI導入支援）自体がオフィス らいらに存在するかも要確認。
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
@@ -114,13 +110,15 @@ get_header();
       <p class="breadcrumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">トップ</a><span class="breadcrumb__sep">›</span><a href="<?php echo esc_url( home_url( '/service/' ) ); ?>">事業内容</a><span class="breadcrumb__sep">›</span>AI導入支援</p>
       <p class="page-header__eyebrow">04 / AI SUPPORT</p>
       <h1 class="page-header__title">
-        （TODO：このサービスの見出し）
+        AIを、<span class="accent">現場で使える仕組み</span>に変える。
       </h1>
       <p class="page-header__lead">
-        （TODO：このサービスの説明文をここに記載してください。）
+        ChatGPT・Claudeなどの生成AIを、営業・事務・問い合わせ対応・Web集客に活用。
+        長年の業務システム開発で培った「現場業務を理解する力」を活かし、
+        中小企業に合わせた現実的なAI導入をご支援します。
       </p>
       <div class="hero__ctas" style="margin-top:28px;">
-        <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--blue btn--lg">相談する</a>
+        <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--blue btn--lg">無料AI診断を相談する</a>
         <a href="#flow" class="btn btn--ghost btn--lg" style="background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.3); color:#fff;">導入の流れを見る</a>
       </div>
     </div>
@@ -130,25 +128,45 @@ get_header();
     <div class="container">
       <div class="section__head">
         <span class="section__eyebrow">SERVICE MENU</span>
-        <h2 class="section__title">（TODO：メニュー見出し）</h2>
-        <p class="section__lead">（TODO：リード文）</p>
+        <h2 class="section__title">AI導入支援メニュー</h2>
+        <p class="section__lead">業務内容に合わせ、必要なところからスモールスタートできます。</p>
       </div>
 
       <div class="ai-services__grid">
         <div class="ai-service-card">
           <div class="ai-service-card__icon">01</div>
-          <h3 class="ai-service-card__title">（TODO：メニュー1）</h3>
-          <p class="ai-service-card__text">（TODO：説明文）</p>
+          <h3 class="ai-service-card__title">ChatGPT / Claude の業務活用支援</h3>
+          <p class="ai-service-card__text">生成AIをどの業務で・どう使うかを整理し、社内で安全に使える形に落とし込みます。利用ルール作成や社内研修にも対応。</p>
         </div>
         <div class="ai-service-card">
           <div class="ai-service-card__icon">02</div>
-          <h3 class="ai-service-card__title">（TODO：メニュー2）</h3>
-          <p class="ai-service-card__text">（TODO：説明文）</p>
+          <h3 class="ai-service-card__title">AIチャットボット導入</h3>
+          <p class="ai-service-card__text">Webサイトや社内ポータルに、自社情報を踏まえて答えるAIチャットを導入。よくある質問対応や1次対応を自動化します。</p>
         </div>
         <div class="ai-service-card">
           <div class="ai-service-card__icon">03</div>
-          <h3 class="ai-service-card__title">（TODO：メニュー3）</h3>
-          <p class="ai-service-card__text">（TODO：説明文）</p>
+          <h3 class="ai-service-card__title">問い合わせ対応の自動化</h3>
+          <p class="ai-service-card__text">フォーム・メール・電話の一次対応をAIで効率化。担当者の対応時間を削減し、漏れのない対応につなげます。</p>
+        </div>
+        <div class="ai-service-card">
+          <div class="ai-service-card__icon">04</div>
+          <h3 class="ai-service-card__title">営業文・資料作成のAI活用</h3>
+          <p class="ai-service-card__text">提案書、営業メール、議事録、ブログ記事などの作成を、品質を保ったままAIで効率化します。</p>
+        </div>
+        <div class="ai-service-card">
+          <div class="ai-service-card__icon">05</div>
+          <h3 class="ai-service-card__title">社内業務の効率化</h3>
+          <p class="ai-service-card__text">日々の定型業務をAI＋自動化ツールで省力化。Excelや既存システムと組み合わせた現実的な仕組みづくりが得意です。</p>
+        </div>
+        <div class="ai-service-card">
+          <div class="ai-service-card__icon">06</div>
+          <h3 class="ai-service-card__title">AIエージェント構築支援</h3>
+          <p class="ai-service-card__text">複数のツールやデータをまたいで、AIに業務を任せられる仕組みを設計・実装します。社内ナレッジを活用した高度な活用にも対応。</p>
+        </div>
+        <div class="ai-service-card">
+          <div class="ai-service-card__icon">07</div>
+          <h3 class="ai-service-card__title">中小企業向けAI導入診断</h3>
+          <p class="ai-service-card__text">業務内容や規模に合わせて、現実的に使えるAI活用ポイントを整理。導入の優先順位までご提案します。</p>
         </div>
       </div>
     </div>
@@ -158,25 +176,25 @@ get_header();
     <div class="container">
       <div class="section__head">
         <span class="section__eyebrow">FLOW</span>
-        <h2 class="section__title">（TODO：導入の流れ見出し）</h2>
-        <p class="section__lead">（TODO：リード文）</p>
+        <h2 class="section__title">AI導入の流れ</h2>
+        <p class="section__lead">いきなり大きく始めるのではなく、小さく試してから定着させる進め方を大切にしています。</p>
       </div>
       <ol class="ai-flow__list">
         <li class="ai-flow__item">
-          <h3>（TODO：ステップ1）</h3>
-          <p>（TODO：説明）</p>
+          <h3>無料相談・ヒアリング</h3>
+          <p>業務内容・お悩み・期待効果をお聞きします。費用や難しい話は不要です。</p>
         </li>
         <li class="ai-flow__item">
-          <h3>（TODO：ステップ2）</h3>
-          <p>（TODO：説明）</p>
+          <h3>AI活用ポイント整理</h3>
+          <p>導入効果が見込める業務を、優先順位とともに整理してご提示します。</p>
         </li>
         <li class="ai-flow__item">
-          <h3>（TODO：ステップ3）</h3>
-          <p>（TODO：説明）</p>
+          <h3>小さく試す（PoC）</h3>
+          <p>まずは小さな範囲で試し、現場で本当に使えるかを確認しながら進めます。</p>
         </li>
         <li class="ai-flow__item">
-          <h3>（TODO：ステップ4）</h3>
-          <p>（TODO：説明）</p>
+          <h3>本格導入・運用支援</h3>
+          <p>社内展開、運用ルール作成、定着までを継続してご支援します。</p>
         </li>
       </ol>
     </div>
@@ -184,17 +202,18 @@ get_header();
 
   <section class="section">
     <div class="container container--narrow prose">
-      <h2>（TODO：見出し）</h2>
-      <p>（TODO：オフィス らいら がこのサービスを提供する理由をここに記載してください。）</p>
+      <h2>システム開発会社が、AI支援まで対応する理由</h2>
+      <p>オフィス らいらは元々、業務システムを長年作り続けてきた会社です。AIを「最新の流行り」として扱うのではなく、これまでの業務システム開発・Web制作・ITコンサルティングの延長線上として、現場で本当に使える形に落とすことを大切にしています。</p>
+      <p>システムを設計・実装してきた知見があるからこそ、AIを「単なるチャット」で終わらせず、既存業務やシステムと連携した現実的な仕組みとして組み上げられます。</p>
     </div>
   </section>
 
   <section class="section cta">
     <div class="container container--narrow">
-      <h2 class="cta__title">まずは相談から。</h2>
-      <p class="cta__lead">初回相談は無料です。</p>
+      <h2 class="cta__title">AI活用、まずは相談から。</h2>
+      <p class="cta__lead">初回相談・AI導入診断は無料です。専門知識はなくて大丈夫です。</p>
       <div class="cta__buttons">
-        <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--primary btn--lg">相談する</a>
+        <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn--primary btn--lg">無料AI相談へ</a>
         <a href="<?php echo esc_url( home_url( '/service/' ) ); ?>" class="btn btn--ghost btn--lg">他の事業も見る</a>
       </div>
     </div>
